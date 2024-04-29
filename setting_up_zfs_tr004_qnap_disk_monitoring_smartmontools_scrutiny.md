@@ -123,7 +123,13 @@
       ```bash
       sudo docker compose restart scrutiny
       ```
+Optional: Manually Check Disk Health with smartctl
+```bash
+# For a detailed health check using smartctl, run the following (replacing /dev/sdb with your identified disk paths)
+for i in {0..3}; do echo -; sudo smartctl -d jmb39x-q,$i -a /dev/sdb ; done
+```
 
+Use code with caution.
 **Working Examples**
 
 ![image](https://github.com/michaelnyatigi/wiki/assets/28693421/2eec3d86-5edf-4061-8e81-5c262992fe9d)
